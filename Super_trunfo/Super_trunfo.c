@@ -23,11 +23,11 @@ int main(){
     printf("Digite sua segunda Cidade: \n");
     scanf("%s" , &cidade2);
     
-    printf("Digite a área2²: \n");
-    scanf("%s" , &area);
+    printf("Digite a área²: \n");
+    scanf("%f" , &area);
 
-    printf("Digite a área2²: \n");
-    scanf("%s" , &area2);
+    printf("Digite a 2área²: \n");
+    scanf("%f" , &area2);
 
     printf("Digite a População: \n");
     scanf("%d" , &populacao);
@@ -35,8 +35,8 @@ int main(){
     printf("Digite a segunda População: \n");
     scanf("%d" , &populacao2);
 
-    printf("Nome do Estado:  %s - Código: %s - Cidade: %s - População: %d \n"  , estado, codigo,  cidade, populacao);
-    printf("Nome do Estado2: %s - Código2: %s - Cidade2: %s - População2: %d" , estado2, codigo2, cidade2, populacao2);
+    printf("Nome do Estado:  %s - Código: %s - Cidade: %s - População: %d - Area²: %f\n"  , estado, codigo,  cidade, populacao,area);
+    printf("Nome do Estado2: %s - Código2: %s - Cidade2: %s - População2: %d -  2Area²: %f" , estado2, codigo2, cidade2, populacao2, area2);
 
 
     return 0;
