@@ -1,11 +1,14 @@
 #include <stdio.h>
 
 int main(){
-    int populacao, populacao2,  turistico, turistico2;
-    float area, area2, pib, pib2;
     char cidade[100], cidade2[100], codigo[100], codigo2[100], estado[100], estado2[300];
+    float populacao, populacao2,  turistico, turistico2;
+    float area, area2, pib, pib2;
+    float densidade, densidade2; 
+    float capita, capita2;
 
-    printf("Digite seu Estado:  \n");
+
+    printf("Digite o seu Estado:  \n");
     scanf("%s" , &estado);
 
     printf("Digite o segundo Estado:  \n");
@@ -22,6 +25,12 @@ int main(){
 
     printf("Digite sua segunda Cidade: \n");
     scanf("%s" , &cidade2);
+
+    printf("Digite o PIB: \n");
+    scanf("%f" , &pib);
+
+    printf("Digite o PIB2: \n");
+    scanf("%f" , &pib2);
     
     printf("Digite a área²: \n");
     scanf("%f" , &area);
@@ -30,13 +39,24 @@ int main(){
     scanf("%f" , &area2);
 
     printf("Digite a População: \n");
-    scanf("%d" , &populacao);
-
+    scanf("%f" , &populacao);
+    
     printf("Digite a segunda População: \n");
-    scanf("%d" , &populacao2);
+    scanf("%f" , &populacao2);
 
-    printf("Nome do Estado:  %s - Código: %s - Cidade: %s - População: %d - Area²: %f\n"  , estado, codigo,  cidade, populacao,area);
-    printf("Nome do Estado2: %s - Código2: %s - Cidade2: %s - População2: %d -  2Area²: %f" , estado2, codigo2, cidade2, populacao2, area2);
+    capita = pib/populacao;
+    capita2 = pib2/populacao2;
+
+    densidade = populacao/area;
+    densidade2 = populacao2/area2; 
+    
+     
+    printf("Nome do Estado:  %s - Código: %s - Cidade: %s - População: %f - Area²: %f - PIB: %f\n"  , estado, codigo,  cidade, populacao,area, pib);
+    printf("A média percapita é: %.2f\n", capita);
+    printf("A média de  densidade populacional é: %.2f\n", densidade);
+    printf("Nome do Estado2: %s - Código2: %s - Cidade2: %s - População2: %f -  2Area²: %f - PIB2: %f\n" , estado2, codigo2, cidade2, populacao2, area2);
+    printf("A média percapita é: %.2f\n", capita2);
+    printf("A média de densidade papulacional é: %.2f\n", densidade2);
 
 
     return 0;
